@@ -1,0 +1,18 @@
+<head>
+	<script src="./js/vue.js"></script>
+	<script>
+	window.onload=function(){
+		var app = new Vue({
+			el: '#app',
+			data: {
+				message: "hehehe",
+			}
+		})
+	}
+</script>
+</head>
+<body>
+	<div id="app">
+		<p v-text="message"></p>
+	</div>
+</body>

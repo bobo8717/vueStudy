@@ -1,0 +1,34 @@
+<head>
+	<script src="./js/vue.js"></script>
+	<script>
+	/*
+		v-model.trim 两端去空格
+			   .lazy 退出输入框起作用
+			   .
+	
+	*/
+	window.onload=function(){
+		var app = new Vue({
+			el: '#app',
+			data: {
+				username: "",
+				lazy:"",
+				number:10,
+			}
+		})
+	}
+</script>
+</head>
+<body>
+	<div id="app">
+		default
+		<input type='text' v-model="username"> </input>
+		<p> {{username}}</p>
+		lazy
+		<input type='text' v-model.lazy="lazy"> </input>
+		<p> {{lazy}}</p>
+		number
+		<input type='text' v-model.number="number"> </input>
+		<p> {{number}}</p>
+	</div>
+</body>

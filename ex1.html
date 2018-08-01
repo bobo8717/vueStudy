@@ -1,0 +1,25 @@
+<head>
+	<script src="./js/vue.js"></script>
+	<script>
+	window.onload=function(){
+		var app = new Vue({
+			el: '#app',
+			data: {
+				message: "hehehe",
+				isButtonDisabled: false
+			}
+		})
+		//console.log(app)
+		setTimeout(function(){
+			app.message = "666"
+			app.isButtonDisabled = true
+		},2000)
+	}
+</script>
+</head>
+<body>
+<div id="app">
+	<p v-text="message"></p>
+	<button :disabled="isButtonDisabled">Button</button>
+</div>
+</body>
